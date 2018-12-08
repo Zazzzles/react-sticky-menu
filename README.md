@@ -1,44 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React native sticky header
 
-## Available Scripts
+> Super simple component for making things stick to the top of the screen when scrolling past them. Especially useful for menus!
 
-In the project directory, you can run:
+![Example](https://media.giphy.com/media/7JBtht5RFma891oFvw/giphy.gif)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Code Samples
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+    import StickyMenu from './components/StickyMenu'
+        
+    class App extends Component {
+    render() {
+        return (
+        <div className="App">
+            <div className='cover'>
+                <h1>This is a landing page</h1>
+            </div>
 
-### `npm test`
+            <StickyMenu>
+                <div className='header'>
+                    <h1>This is a sticky menu</h1>
+                </div>
+            </StickyMenu>
+        
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+            <div className='about'> 
+            <h1>This is a about section</h1>
+            </div>
 
-### `npm run build`
+            <div className='contact'> 
+            <h1>This is a contact section</h1>
+            </div>
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        </div>
+        );
+    }
+    }
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Use the `<StickyMenu>` component to wrap elements to stick to the top of the page when scrolled past.
 
-### `npm run eject`
+## Starting the project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm run start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+or if you're using yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`yarn start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Pull Requests
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork it and create your feature branch: git checkout -b my-new-feature
+2. Commit your changes: git commit -am 'Add some feature'
+3. Push to the branch: git push origin my-new-feature 
+4. Submit a pull request
