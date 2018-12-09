@@ -14,8 +14,7 @@ class StickyMenu extends Component {
  
      componentDidMount = () => {
          this.topOffset = this.refs.wrapper.offsetTop
-         this.headerHeight = this.refs.wrapper.clientHeight
-         console.log(this.headerHeight)
+         this.headerHeight = this.refs.wrapper.clientHeight    
          window.addEventListener('scroll', () =>{
            if(this.topOffset < window.pageYOffset){
              this.setState({
